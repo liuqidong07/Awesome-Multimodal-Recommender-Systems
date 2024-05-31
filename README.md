@@ -8,17 +8,40 @@ A collection of resources and papers of __Multimodal Recommender Systems__ (MRS)
 
 In our survey, we conclude the general MRS as an unified process, including Raw Feature Representation, Feature Interaction and Recommend Model. To face with the challenges contained in each procedure, we classify the existing works according to four branch of techniques, i.e., __Modality Encoder__, __Feature Interaction__, __Feature Enhancement__ and __Optimization__.
 
-![](MRS.png)
+<img src="MRS.png" style="zoom: 33%;" />
 
 More details can be seen in our survey.
 
 ## 2. Open-sourced Repositories
 
-MMRec
+There are two open-sourced repositories for implementing multimodal recommender system models.
 
-Cornec
+[MMRec](https://github.com/enoche/MMRec): A PyTorch benchmark, which implements 15 most recent MRS models. 
+
+[Cornec](https://github.com/PreferredAI/cornac): A PyTorch framework, which implements more earlier MRS model.
 
 ## 3. Datasets
+
+| Data           |       Field        | Modality |  Scale   |                             link                             |
+| -------------- | :----------------: | :------: | :------: | :----------------------------------------------------------: |
+| Tiktok         |    Micro-video     | V,T,M,A  |  726K+   |  [link](https://paperswithcode.com/dataset/tiktok-dataset)   |
+| Kwai           |    Micro-video     |  V,T,M   |   1M+    |    [link](https://zenodo.org/record/4023390#.Y9YZ6XZBw7c)    |
+| Movielens+IMDB |       Movie        |   V,T    | 100K-25M |      [link](https://grouplens.org/datasets/movielens/)       |
+| Douban         | Movie, Book, Music |   V,T    |   1M+    | [link](https://github.com/FengZhu-Joey/GA-DTCDR/tree/main/Data) |
+| Yelp           |        POI         | V,T,POI  |   1M+    |             [link](https://www.yelp.com/dataset)             |
+| Amazon         |     E-commerce     |   V,T    |  100M+   | [link](https://cseweb.ucsd.edu/~jmcauley/datasets.html#amazon_reviews) |
+| Book-Crossings |        Book        |   V,T    |   1M+    | [link](http://www2.informatik.uni-freiburg.de/~cziegler/BX/) |
+| Amazon Books   |        Book        |   V,T    |    3M    |        [link](https://jmcauley.ucsd.edu/data/amazon/)        |
+| Amazon Fashion |      Fashion       |   V,T    |    1M    |        [link](https://jmcauley.ucsd.edu/data/amazon/)        |
+| POG            |      Fashion       |   V,T    |   1M+    | [link](https://drive.google.com/drive/folders/1xFdx5xuNXHGsUVG2VIohFTXf9S7G5veq) |
+| TMall          |      Fashion       |   V,T    |   8M+    |        [link](https://tianchi.aliyun.com/dataset/43)         |
+| Taobao         |      Fashion       |   V,T    |   1M+    |        [link](https://tianchi.aliyun.com/dataset/52)         |
+| Tianchi News   |        News        |    T     |   3M+    | [link](https://tianchi.aliyun.com/competition/entrance/531842/introduction) |
+| MIND           |        News        |   V,T    |   15M+   |              [link](https://msnews.github.io/)               |
+| Last.FM        |       Music        |  V,T,A   |  186K+   | [link](https://www.heywhale.com/mw/dataset/5cfe0526e727f8002c36b9d9/content) |
+| MSD            |       Music        |   T,A    |   48M+   |       [link](http://millionsongdataset.com/challenge/)       |
+
+Note: ’V’, ’T’, ’M’, ’A’ indicate the visual data, textual data, video data and acoustic data, respectively
 
 ## 4. Paper List
 
@@ -70,14 +93,14 @@ Cornec
 | DMRL | [Disentangled Multimodal Representation Learning for Recommendation](https://ieeexplore.ieee.org/abstract/document/9930669) | Fine-grained Attention | DRL | End-to-end | TMM'22 | [link](https://github.com/liufancs/DMRL) |
 |  | [Implicit semantic-based personalized micro-videos recommendation](https://arxiv.org/pdf/2205.03297) | Fine-grained Attention | None | End-to-end | arXiv'22 | N/A |
 |   VLSNR   | [VLSNR:Vision-Linguistics Coordination Time Sequence-aware News Recommendation](https://arxiv.org/pdf/2210.02946) |                    Combined Attention                    |        None         |  End-to-end  | arXiv'22  |       [link](https://github.com/Aaronhuang-778/V-MIND)       |
-| BM3 | [Bootstrap Latent Representations for Multi-modal Recommendation  ](https://dl.acm.org/doi/pdf/10.1145/3543507.3583251) | User-item Graph + Other Fusion | CL | End-to-end | WWW'23 | [link](https://github.com/enoche/BM3) |
-| MMMLP | [MMMLP: Multi-modal Multilayer Perceptron for Sequential Recommendations  ](https://dl.acm.org/doi/pdf/10.1145/3543507.3583378) | Other Fusion | None | End-to-end | WWW'23 | [link](https://github.com/Applied-Machine-Learning-Lab/MMMLP) |
-| MMSSL | [Multi-Modal Self-Supervised Learning for Recommendation  ](https://dl.acm.org/doi/pdf/10.1145/3543507.3583206) | User-item Graph + Coarse-grained Attention | CL | End-to-end | WWW'23 | [link](https://github.com/HKUDS/MMSSL) |
+| BM3 | [Bootstrap Latent Representations for Multi-modal Recommendation](https://dl.acm.org/doi/pdf/10.1145/3543507.3583251) | User-item Graph + Other Fusion | CL | End-to-end | WWW'23 | [link](https://github.com/enoche/BM3) |
+| MMMLP | [MMMLP: Multi-modal Multilayer Perceptron for Sequential Recommendations](https://dl.acm.org/doi/pdf/10.1145/3543507.3583378) | Other Fusion | None | End-to-end | WWW'23 | [link](https://github.com/Applied-Machine-Learning-Lab/MMMLP) |
+| MMSSL | [Multi-Modal Self-Supervised Learning for Recommendation](https://dl.acm.org/doi/pdf/10.1145/3543507.3583206) | User-item Graph + Coarse-grained Attention | CL | End-to-end | WWW'23 | [link](https://github.com/HKUDS/MMSSL) |
 | TMFUN | [Attention-guided Multi-step Fusion: A Hierarchical Fusion Network for Multimodal Recommendation](https://dl.acm.org/doi/pdf/10.1145/3539618.3591950) | Item-item Graph + Coarse-grained Attention | CL | End-to-end | SIGIR'23 | N/A |
-| MCLN | [Multimodal Counterfactual Learning Network for Multimedia-based Recommendation  ](https://dl.acm.org/doi/pdf/10.1145/3539618.3591739) | Filtration | None | End-to-end | SIGIR'23 | [link](https://github.com/shuaiyangli/MCLN) |
+| MCLN | [Multimodal Counterfactual Learning Network for Multimedia-based Recommendation](https://dl.acm.org/doi/pdf/10.1145/3539618.3591739) | Filtration | None | End-to-end | SIGIR'23 | [link](https://github.com/shuaiyangli/MCLN) |
 | | [Enhancing Adversarial Robustness of Multi-modal Recommendation via Modality Balancing](https://dl.acm.org/doi/pdf/10.1145/3581783.3612337) | Filtration | None | End-to-end | MM'23 | N/A |
 | MGCN | [MGCN: Multi-View Graph Convolutional Network for Multimedia Recommendation](https://dl.acm.org/doi/pdf/10.1145/3581783.3613915) | User-item Graph+Item-item Graph+Coarse-grained Attention | None | End-to-end | MM'23 | [link](https://github.com/demonph10/MGCN) |
-| SGFD | [Semantic-Guided Feature Distillation for Multimodal Recommendation  ](https://dl.acm.org/doi/pdf/10.1145/3581783.3611886) | User-item Graph | None | Two-step | MM'23 | [link](https://github.com/HuilinChenJN/SGFD) |
+| SGFD | [Semantic-Guided Feature Distillation for Multimodal Recommendation](https://dl.acm.org/doi/pdf/10.1145/3581783.3611886) | User-item Graph | None | Two-step | MM'23 | [link](https://github.com/HuilinChenJN/SGFD) |
 | LATTICE | [A Tale of Two Graphs: Freezing and Denoising Graph Structures for Multimodal Recommendation](https://dl.acm.org/doi/pdf/10.1145/3581783.3611943) | Filtration | None | End-to-end | MM'23 | [link](https://github.com/enoche/FREEDOM) |
 | MMSR | [Adaptive Multi-Modalities Fusion in Sequential Recommendation Systems](https://dl.acm.org/doi/pdf/10.1145/3583780.3614775) | Item-item Graph + Combined-attention | None | End-to-end | CIKM'23 | [link](https://github.com/HoldenHu/MMSR) |
 | M3Srec | [Multi-modal Mixture of Experts Representation Learning for Sequential Recommendation](https://dl.acm.org/doi/pdf/10.1145/3583780.3614978) | Other Fusion | CL | Two-step | CIKM'23 | [link](https://github.com/RUCAIBox/M3SRec) |
